@@ -1,0 +1,81 @@
+body {
+  background-color: #f4f4f4;
+  color: #202040;
+  font-family: 'Roboto', sans-serif;
+}
+
+.section {
+  height: 100vh;
+  text-align: center;
+}
+
+#section-home {
+  padding-top: 150px;
+}
+
+#profile-pic {
+  border: 5px solid #ffbd69;
+  border-radius: 350px;
+  height: 350px;
+  width: 350px;
+}
+
+/* BEGIN OVER IMAGE */
+.hover-wrap {
+  border-radius: 350px;
+  position: relative;
+  height: 350px;
+  margin: auto;
+  width: 350px;
+}
+
+.hover-wrap .overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: 0;
+  background: rgba(255, 124, 124, 0.8);
+  border: 5px solid #ffbd69;
+  border-radius: 350px;
+  color: #fff;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity .2s, visibility .2s;
+}
+
+.hover-wrap:hover .overlay {
+  visibility: visible;
+  opacity: 1;
+}
+
+.overlay p {
+  width: 200px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  font-size: 20px;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+/* END OVER IMAGE */
+
+h1 {
+  font-family: 'Anton', sans-serif;
+  font-size: 70px;
+}
+
+#section-about {
+  background-color: #202040;
+  color: #f4f4f4;
+  padding-top: 150px;
+}
+
+#section-portfolio {
+  background-color: #ffbd69;
+  color: #f4f4f4;
+  padding-top: 150px;
+}

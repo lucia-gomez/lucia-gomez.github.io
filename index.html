@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Lucia Gomez</title>
+  <!-- Bootstrap core CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <!-- Font Awesome: icons -->
+  <script src="https://kit.fontawesome.com/9dd13a1052.js" crossorigin="anonymous"></script>
+  <!-- jQuery -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <!--- Google fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Roboto&display=swap" rel="stylesheet">
+  <!-- my stylesheet -->
+  <link type="text/css" rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+  <!-- load sticky nav bar -->
+  <div id="nav-placeholder">
+  </div>
+  <script>
+    $(function () {
+      $("#nav-placeholder").load("nav.html");
+    });
+  </script>
+
+  <a id="home"></a>
+  <div class="section" id="section-home">
+    <div class="hover-wrap">
+      <img id="profile-pic" src="assets/images/profile-circle.png" />
+      <div class="overlay">
+        <p>Sadly, this dog isn't mine. But her name is also Lucia and I cried
+          when I met her.</p>
+      </div>
+    </div>
+    <h1 style="padding-top: 20px;">LUCIA GOMEZ</h1>
+    <h2>Software Engineer</h2>
+  </div>
+
+  <a id="about"></a>
+  <div class="section" id="section-about">
+    <h1>About Me</h1>
+  </div>
+
+  <a id="portfolio"></a>
+  <div class="section" id="section-portfolio">
+    <h1>Things I've Made</h1>
+  </div>
+
+</body>
+
+</html>
