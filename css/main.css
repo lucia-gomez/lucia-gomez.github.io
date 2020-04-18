@@ -79,3 +79,16 @@ h1 {
   color: #f4f4f4;
   padding-top: 150px;
 }
+
+#section-404 {
+  background-color: #ffbd69;
+  color: #f4f4f4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#section-404 img {
+  border-radius: 350px;
+  height: 350px;
+}
