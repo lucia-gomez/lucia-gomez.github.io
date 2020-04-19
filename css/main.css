@@ -1,3 +1,7 @@
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background-color: #f4f4f4;
   color: #202040;
@@ -16,18 +20,18 @@ body {
 
 #profile-pic {
   border: 5px solid #ffbd69;
-  border-radius: 350px;
-  height: 350px;
-  width: 350px;
+  border-radius: 35vw;
+  height: 35vw;
+  width: 35vw;
 }
 
 /* BEGIN OVER IMAGE */
 .hover-wrap {
-  border-radius: 350px;
+  border-radius: 35vw;
   position: relative;
-  height: 350px;
+  height: 35vw;
   margin: auto;
-  width: 350px;
+  width: 35vw;
 }
 
 .hover-wrap .overlay {
@@ -39,7 +43,7 @@ body {
   margin: 0;
   background: rgba(255, 124, 124, 0.8);
   border: 5px solid #ffbd69;
-  border-radius: 350px;
+  border-radius: 35vw;
   color: #fff;
   visibility: hidden;
   opacity: 0;
