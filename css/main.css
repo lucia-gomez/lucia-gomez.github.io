@@ -2,6 +2,7 @@ body {
   background-color: #f4f4f4;
   color: #202040;
   font-family: 'Roboto', sans-serif;
+  position: relative;
 }
 
 .section {
@@ -9,7 +10,7 @@ body {
   text-align: center;
 }
 
-#section-home {
+#home {
   padding-top: 150px;
 }
 
@@ -68,13 +69,13 @@ h1 {
   font-size: 70px;
 }
 
-#section-about {
+#about {
   background-color: #202040;
   color: #f4f4f4;
   padding-top: 150px;
 }
 
-#section-portfolio {
+#portfolio {
   background-color: #ffbd69;
   color: #f4f4f4;
   padding-top: 150px;

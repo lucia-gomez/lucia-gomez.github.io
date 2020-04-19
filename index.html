@@ -14,7 +14,7 @@
   <link type="text/css" rel="stylesheet" href="css/main.css">
 </head>
 
-<body>
+<body data-spy="scroll" data-target="#main-navbar" data-offset="0">
   <!-- Font Awesome: icons -->
   <script src="https://kit.fontawesome.com/9dd13a1052.js" crossorigin="anonymous"></script>
   <!-- jQuery -->
@@ -24,7 +24,7 @@
     integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
     crossorigin="anonymous"></script>
 
-  <!-- load sticky nav bar -->
+  <!-- load fixed top nav bar -->
   <div id="nav-placeholder">
   </div>
   <script>
@@ -33,8 +33,7 @@
     });
   </script>
 
-  <a id="home"></a>
-  <div class="section" id="section-home">
+  <div class="section" id="home">
     <div class="hover-wrap">
       <img id="profile-pic" src="assets/images/profile-circle.png" />
       <div class="overlay">
@@ -46,13 +45,11 @@
     <h2>Software Engineer</h2>
   </div>
 
-  <a id="about"></a>
-  <div class="section" id="section-about">
+  <div class="section" id="about">
     <h1>About Me</h1>
   </div>
 
-  <a id="portfolio"></a>
-  <div class="section" id="section-portfolio">
+  <div class="section" id="portfolio">
     <h1>Things I've Made</h1>
   </div>
 </body>
