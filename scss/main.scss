@@ -1,0 +1,180 @@
+$darkpurple: #202040;
+$red: #ff7c7c;
+$white: #f4f4f4;
+$yellow: #ffbd69;
+$smallfont: 'Roboto', sans-serif;
+$bigfont: 'Anton', sans-serif;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: $white;
+  color:$darkpurple;
+  font-family: $smallfont;
+  position: relative;
+}
+
+.section {
+  height: 100vh;
+  text-align: center;
+}
+
+#home {
+  padding-top: 150px;
+}
+
+/// Resize profile picture based on viewport size, with max/min bounds
+///
+/// @author adapted from Eduardo Boucas (@eduardoboucas)
+///
+/// @param {Number}   $responsive  - Viewport-based size
+/// @param {Number}   $min         - Minimum font size (px)
+/// @param {Number}   $max         - Maximum font size (px)
+///                                  (optional)
+/// @param {Number}   $fallback    - Fallback for viewport-
+///                                  based units (optional)
+///
+@mixin responsive-profile-pic($responsive, $min, $max: false, $fallback: false) {
+  $responsive-unitless: $responsive / ($responsive - $responsive + 1);
+  $dimension: if(unit($responsive) == 'vh', 'height', 'width');
+  $min-breakpoint: $min / $responsive-unitless * 100;
+  
+  @media (max-#{$dimension}: #{$min-breakpoint}) {
+    height: $min;
+    width: $min;
+    border-radius: $min;
+  }
+  
+  @if $max {
+    $max-breakpoint: $max / $responsive-unitless * 100;
+    
+    @media (min-#{$dimension}: #{$max-breakpoint}) {
+      height: $max;
+      width: $max;
+      border-radius: $max;
+    }
+  }
+  
+  @if $fallback {
+    height: $fallback;
+    width: $fallback;
+    border-radius: $fallback;
+  }
+  
+  height: $responsive;
+  width: $responsive;
+  border-radius: $responsive;
+}
+
+#profile-pic {
+  border: 5px solid $yellow;
+  @include responsive-profile-pic(35vw, 230px, 350px, 200px);
+}
+
+/* BEGIN OVER IMAGE */
+.hover-wrap {
+  position: relative;
+  @include responsive-profile-pic(35vw, 230px, 350px, 200px);
+  margin: auto;
+}
+
+.hover-wrap .overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: 0;
+  background: rgba(255, 124, 124, 0.8);
+  border: 5px solid $yellow;
+  @include responsive-profile-pic(35vw, 230px, 350px, 200px);
+  color: #fff;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity .2s, visibility .2s;
+}
+
+.hover-wrap:hover .overlay {
+  visibility: visible;
+  opacity: 1;
+}
+
+.overlay p {
+  width: 200px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  font-size: 20px;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+/* END OVER IMAGE */
+
+/// Resize profile picture based on viewport size, with max/min bounds
+///
+/// @author adapted from Eduardo Boucas (@eduardoboucas)
+///
+/// @param {Number}   $responsive  - Viewport-based size
+/// @param {Number}   $min         - Minimum font size (px)
+/// @param {Number}   $max         - Maximum font size (px)
+///                                  (optional)
+/// @param {Number}   $fallback    - Fallback for viewport-
+///                                  based units (optional)
+///
+@mixin responsive-big-text($responsive, $min, $max: false, $fallback: false) {
+  $responsive-unitless: $responsive / ($responsive - $responsive + 1);
+  $dimension: if(unit($responsive) == 'vh', 'height', 'width');
+  $min-breakpoint: $min / $responsive-unitless * 100;
+  
+  @media (max-#{$dimension}: #{$min-breakpoint}) {
+    font-size: $min;
+  }
+  
+  @if $max {
+    $max-breakpoint: $max / $responsive-unitless * 100;
+    
+    @media (min-#{$dimension}: #{$max-breakpoint}) {
+      font-size: $max;
+    }
+  }
+  
+  @if $fallback {
+    font-size: $fallback;
+  }
+  
+  font-size: $responsive;
+}
+
+h1 {
+  font-family: $bigfont;
+  @include responsive-big-text(7vw, 50px, 90px, 60px)
+}
+
+#about {
+  background-color: $darkpurple;
+  color: $white;
+  padding-top: 150px;
+}
+
+#portfolio {
+  background-color: $yellow;
+  color: $white;
+  padding-top: 150px;
+}
+
+#section-404 {
+  background-color: $yellow;
+  color: $white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#section-404 img {
+  @include responsive-profile-pic(35vw, 230px, 350px, 200px);
+  width: auto!important;
+}
