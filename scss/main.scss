@@ -16,7 +16,7 @@ body {
   position: relative;
 }
 
-.section {
+section {
   height: 100vh;
   text-align: center;
 }
@@ -163,6 +163,8 @@ h1 {
 #portfolio {
   background-color: $yellow;
   color: $white;
+  min-height: 100vh;
+  height: auto;
   padding-top: 150px;
 }
 
@@ -177,4 +179,61 @@ h1 {
 #section-404 img {
   @include responsive-profile-pic(35vw, 230px, 350px, 200px);
   width: auto!important;
+}
+
+.lang-progress {
+  margin: 0px 10px;
+}
+
+.progress {
+  background-color: #f4f4f4;
+  height: 15px;
+  margin-top: 1rem;
+  width: 25vw;
+}
+
+.progress-bar {
+  background-color: #ff7c7c;
+}
+
+.progress-label {
+  float: left;
+  line-height: 15px;
+  margin-right: 1em;
+  text-align: right;
+  width: 80px;
+}
+
+.gallery-flex-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 20px;
+}
+
+.gallery-item {
+  height: 250px;
+  width: 250px;
+  background-color: $white;
+  color: $darkpurple;
+  border-radius: 5px;
+  margin: 5px;
+  transition: transform .2s;
+}
+
+.gallery-item:hover {
+  transform: scale(1.03);
+}
+
+.gallery-image {
+  border-radius: 5px 5px 0px 0px;
+  background-size: 150%; 
+  background-position: top center;
+  height: 80%;
+  width: 100%;
+}
+
+.gallery-text {
+  padding: 10px;
 }

@@ -33,7 +33,7 @@
     });
   </script>
 
-  <div class="section" id="home">
+  <section id="home">
     <div class="hover-wrap">
       <img id="profile-pic" src="assets/images/profile-circle.png" />
       <div class="overlay">
@@ -43,15 +43,22 @@
     </div>
     <h1 style="padding-top: 20px;">LUCIA GOMEZ</h1>
     <h2>Software Engineer</h2>
-  </div>
+  </section>
 
-  <div class="section" id="about">
+  <section id="about">
     <h1>About Me</h1>
-  </div>
+  </section>
 
-  <div class="section" id="portfolio">
+  <section id="portfolio">
     <h1>Things I've Made</h1>
-  </div>
+    <div id="portfolio-placeholder">
+    </div>
+    <script>
+      $(function () {
+        $("#portfolio-placeholder").load("portfolio.html");
+      });
+    </script>
+  </section>
 </body>
 
 </html>
