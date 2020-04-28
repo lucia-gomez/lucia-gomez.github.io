@@ -2,13 +2,13 @@ html {
   scroll-behavior: smooth; }
 
 body {
-  background-color: #f4f4f4;
-  color: #202040;
+  background-color: #1d3557;
+  color: #f1faee;
   font-family: "Roboto", sans-serif;
   position: relative; }
 
 nav {
-  background-color: #ff7c7c; }
+  background-color: #e63946; }
 
 section {
   height: 100vh;
@@ -18,7 +18,7 @@ section {
   padding-top: 150px; }
 
 #profile-pic {
-  border: 5px solid #ffbd69;
+  border: 5px solid #e63946;
   height: 200px;
   width: 200px;
   border-radius: 200px;
@@ -47,7 +47,7 @@ section {
   left: 0;
   right: 0;
   margin: 0;
-  background: rgba(32, 32, 64, 0.8);
+  background: rgba(69, 123, 157, 0.8);
   color: #fff;
   visibility: hidden;
   opacity: 0;
@@ -89,7 +89,7 @@ section {
       border-radius: 350px; } }
 
 #overlay-profile-pic.overlay {
-  border: 5px solid #ffbd69;
+  border: 5px solid #e63946;
   height: 200px;
   width: 200px;
   border-radius: 200px;
@@ -119,20 +119,20 @@ h1 {
       font-size: 90px; } }
 
 #about {
-  background-color: #202040;
-  color: #f4f4f4;
+  background-color: #457b9d;
+  color: #f1faee;
   padding-top: 150px; }
 
 #portfolio {
-  background-color: #ffbd69;
-  color: #f4f4f4;
+  background-color: #f1faee;
+  color: #1d3557;
   min-height: 100vh;
   height: auto;
   padding-top: 150px; }
 
 #section-404 {
-  background-color: #ffbd69;
-  color: #f4f4f4;
+  background-color: #e63946;
+  color: #f1faee;
   display: flex;
   justify-content: center;
   align-items: center; }
@@ -160,13 +160,22 @@ h1 {
   margin: 0px 10px; }
 
 .progress {
-  background-color: #f4f4f4;
+  background-color: #f1faee;
   height: 15px;
   margin-top: 1rem;
   width: 25vw; }
 
-.progress-bar {
-  background-color: #ff7c7c; }
+.progress-bar1 {
+  background-color: #e63946; }
+
+.progress-bar2 {
+  background-color: #e63946; }
+
+.progress-bar3 {
+  background-color: #e63946; }
+
+.progress-bar4 {
+  background-color: #e63946; }
 
 .progress-label {
   float: left;
@@ -185,8 +194,8 @@ h1 {
 .gallery-item {
   height: 250px;
   width: 250px;
-  background-color: #f4f4f4;
-  color: #202040;
+  background-color: #a8dadc;
+  color: #1d3557;
   border-radius: 5px;
   margin: 5px; }
 

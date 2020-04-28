@@ -1,9 +1,9 @@
-$darkpurple: #202040;
-$red: #ff7c7c;
-$white: #f4f4f4;
-$yellow: #ffbd69;
-// $overlay-color: rgba(255, 124, 124, 0.8);
-$overlay-color: rgba(32, 32, 64, 0.8);
+$red: #e63946;
+$darkblue: #1d3557;
+$mediumblue: #457b9d;
+$lightblue: #a8dadc;
+$white: #f1faee;
+$overlay-color: rgba(69, 123, 157, 0.8);
 $smallfont: 'Roboto', sans-serif;
 $bigfont: 'Anton', sans-serif;
 
@@ -12,8 +12,8 @@ html {
 }
 
 body {
-  background-color: $white;
-  color:$darkpurple;
+  background-color: $darkblue;
+  color:$white;
   font-family: $smallfont;
   position: relative;
 }
@@ -75,7 +75,7 @@ section {
 }
 
 #profile-pic {
-  border: 5px solid $yellow;
+  border: 5px solid $red;
   @include responsive-profile-pic(35vw, 230px, 350px, 200px);
 }
 
@@ -122,7 +122,7 @@ section {
 }
 
 #overlay-profile-pic.overlay {
-  border: 5px solid $yellow;
+  border: 5px solid $red;
   @include responsive-profile-pic(35vw, 230px, 350px, 200px);
 }
 
@@ -167,21 +167,21 @@ h1 {
 }
 
 #about {
-  background-color: $darkpurple;
+  background-color: $mediumblue;
   color: $white;
   padding-top: 150px;
 }
 
 #portfolio {
-  background-color: $yellow;
-  color: $white;
+  background-color: $white;
+  color: $darkblue;
   min-height: 100vh;
   height: auto;
   padding-top: 150px;
 }
 
 #section-404 {
-  background-color: $yellow;
+  background-color: $red;
   color: $white;
   display: flex;
   justify-content: center;
@@ -198,14 +198,26 @@ h1 {
 }
 
 .progress {
-  background-color: #f4f4f4;
+  background-color: $white;
   height: 15px;
   margin-top: 1rem;
   width: 25vw;
 }
 
-.progress-bar {
-  background-color: #ff7c7c;
+.progress-bar1 {
+  background-color: $red;
+}
+
+.progress-bar2 {
+  background-color: $red;
+}
+
+.progress-bar3 {
+  background-color: $red;
+}
+
+.progress-bar4 {
+  background-color: $red;
 }
 
 .progress-label {
@@ -227,8 +239,8 @@ h1 {
 .gallery-item {
   height: 250px;
   width: 250px;
-  background-color: $white;
-  color: $darkpurple;
+  background-color: $lightblue;
+  color: $darkblue;
   border-radius: 5px;
   margin: 5px;
 }
