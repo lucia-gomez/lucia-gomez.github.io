@@ -12,31 +12,28 @@ nav {
 
 section {
   height: 100vh;
+  padding-top: 75px;
   text-align: center; }
 
+/*******************
+  SECTIONS
+********************/
 #home {
   padding-top: 150px; }
 
-#profile-pic {
-  border: 5px solid #e63946;
-  height: 200px;
-  width: 200px;
-  border-radius: 200px;
-  height: 35vw;
-  width: 35vw;
-  border-radius: 35vw; }
-  @media (max-width: 657.14286px) {
-    #profile-pic {
-      height: 230px;
-      width: 230px;
-      border-radius: 230px; } }
-  @media (min-width: 1000px) {
-    #profile-pic {
-      height: 350px;
-      width: 350px;
-      border-radius: 350px; } }
+#about {
+  background-color: #457b9d;
+  color: #f1faee; }
 
-/* BEGIN OVER IMAGE */
+#portfolio {
+  background-color: #f1faee;
+  color: #1d3557;
+  min-height: 100vh;
+  height: auto; }
+
+/*******************
+  IMAGE HOVER OVERLAYS
+********************/
 .hover-wrap {
   position: relative; }
 
@@ -47,7 +44,7 @@ section {
   left: 0;
   right: 0;
   margin: 0;
-  background: rgba(69, 123, 157, 0.8);
+  background: rgba(29, 53, 87, 0.9);
   color: #fff;
   visibility: hidden;
   opacity: 0;
@@ -68,7 +65,28 @@ section {
   transform: translate(-50%, -50%);
   text-align: center; }
 
-/* END OVER IMAGE */
+/*******************
+  PROFILE PIC HOVER OVERLAY
+********************/
+#profile-pic {
+  border: 5px solid #457b9d;
+  height: 200px;
+  width: 200px;
+  border-radius: 200px;
+  height: 35vw;
+  width: 35vw;
+  border-radius: 35vw; }
+  @media (max-width: 657.14286px) {
+    #profile-pic {
+      height: 230px;
+      width: 230px;
+      border-radius: 230px; } }
+  @media (min-width: 1000px) {
+    #profile-pic {
+      height: 350px;
+      width: 350px;
+      border-radius: 350px; } }
+
 #hover-wrap-profile-pic.hover-wrap {
   height: 200px;
   width: 200px;
@@ -89,7 +107,7 @@ section {
       border-radius: 350px; } }
 
 #overlay-profile-pic.overlay {
-  border: 5px solid #e63946;
+  border: 5px solid #457b9d;
   height: 200px;
   width: 200px;
   border-radius: 200px;
@@ -107,6 +125,9 @@ section {
       width: 350px;
       border-radius: 350px; } }
 
+/*******************
+  RESPONSIVE HEADERS
+********************/
 h1 {
   font-family: "Anton", sans-serif;
   font-size: 60px;
@@ -118,18 +139,9 @@ h1 {
     h1 {
       font-size: 90px; } }
 
-#about {
-  background-color: #457b9d;
-  color: #f1faee;
-  padding-top: 150px; }
-
-#portfolio {
-  background-color: #f1faee;
-  color: #1d3557;
-  min-height: 100vh;
-  height: auto;
-  padding-top: 150px; }
-
+/*******************
+  404 PAGE
+********************/
 #section-404 {
   background-color: #e63946;
   color: #f1faee;
@@ -156,6 +168,9 @@ h1 {
       width: 350px;
       border-radius: 350px; } }
 
+/*******************
+  PROGRESS BARS
+********************/
 .lang-progress {
   margin: 0px 10px; }
 
@@ -165,16 +180,7 @@ h1 {
   margin-top: 1rem;
   width: 25vw; }
 
-.progress-bar1 {
-  background-color: #e63946; }
-
-.progress-bar2 {
-  background-color: #e63946; }
-
-.progress-bar3 {
-  background-color: #e63946; }
-
-.progress-bar4 {
+.progress-bar {
   background-color: #e63946; }
 
 .progress-label {
@@ -184,6 +190,9 @@ h1 {
   text-align: right;
   width: 80px; }
 
+/*******************
+  GALLERY
+********************/
 .gallery-flex-container {
   display: flex;
   flex-direction: row;
@@ -193,7 +202,7 @@ h1 {
 
 .gallery-item {
   height: 250px;
-  width: 250px;
+  width: 400px;
   background-color: #a8dadc;
   color: #1d3557;
   border-radius: 5px;
@@ -201,7 +210,7 @@ h1 {
 
 .gallery-item .overlay {
   border-radius: 5px 5px 0px 0px;
-  height: 200px;
+  height: 202px;
   margin: 5px; }
 
 .gallery-item .overlay p {
@@ -209,12 +218,19 @@ h1 {
 
 .gallery-image {
   border-radius: 5px 5px 0px 0px;
-  background-size: 150%;
+  background-size: 100%;
   background-position: top center;
-  height: 80%;
+  height: 80.8%;
   width: 100%; }
 
 .gallery-text {
   padding: 10px; }
+
+@media (max-width: 450px) {
+  .gallery-item {
+    width: 300px; }
+
+  .gallery-image {
+    background-size: 130% !important; } }
 
 /*# sourceMappingURL=main.css.map */

@@ -3,9 +3,14 @@ $darkblue: #1d3557;
 $mediumblue: #457b9d;
 $lightblue: #a8dadc;
 $white: #f1faee;
-$overlay-color: rgba(69, 123, 157, 0.8);
+$overlay-color: rgba(29, 53, 87, 0.9);
+// $overlay-color: rgba(69, 123, 157, 0.9);
 $smallfont: 'Roboto', sans-serif;
 $bigfont: 'Anton', sans-serif;
+
+$gallery-square-height: 250px;
+$gallery-square-width: 400px;
+$gallery-caption-height: 48px;
 
 html {
   scroll-behavior: smooth;
@@ -24,12 +29,72 @@ nav {
 
 section {
   height: 100vh;
+  padding-top: 75px;
   text-align: center;
 }
+
+/*******************
+  SECTIONS
+********************/
 
 #home {
   padding-top: 150px;
 }
+
+#about {
+  background-color: $mediumblue;
+  color: $white;
+}
+
+#portfolio {
+  background-color: $white;
+  color: $darkblue;
+  min-height: 100vh;
+  height: auto;
+}
+
+/*******************
+  IMAGE HOVER OVERLAYS
+********************/
+
+.hover-wrap {
+  position: relative;
+}
+
+.hover-wrap .overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: 0;
+  background: $overlay-color;
+  color: #fff;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity .2s, visibility .2s;
+}
+
+.hover-wrap:hover .overlay {
+  visibility: visible;
+  opacity: 1;
+}
+
+.hover-wrap .overlay p {
+  width: 200px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  font-size: 20px;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+/*******************
+  PROFILE PIC HOVER OVERLAY
+********************/
 
 /// Resize profile picture based on viewport size, with max/min bounds
 ///
@@ -75,46 +140,9 @@ section {
 }
 
 #profile-pic {
-  border: 5px solid $red;
+  border: 5px solid $mediumblue;
   @include responsive-profile-pic(35vw, 230px, 350px, 200px);
 }
-
-/* BEGIN OVER IMAGE */
-.hover-wrap {
-  position: relative;
-}
-
-.hover-wrap .overlay {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  margin: 0;
-  background: $overlay-color;
-  color: #fff;
-  visibility: hidden;
-  opacity: 0;
-  transition: opacity .2s, visibility .2s;
-}
-
-.hover-wrap:hover .overlay {
-  visibility: visible;
-  opacity: 1;
-}
-
-.hover-wrap .overlay p {
-  width: 200px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  font-size: 20px;
-  -webkit-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-  text-align: center;
-}
-/* END OVER IMAGE */
 
 #hover-wrap-profile-pic.hover-wrap {
   @include responsive-profile-pic(35vw, 230px, 350px, 200px);
@@ -122,9 +150,13 @@ section {
 }
 
 #overlay-profile-pic.overlay {
-  border: 5px solid $red;
+  border: 5px solid $mediumblue;
   @include responsive-profile-pic(35vw, 230px, 350px, 200px);
 }
+
+/*******************
+  RESPONSIVE HEADERS
+********************/
 
 /// Resize section header text size based on viewport size, with max/min bounds
 ///
@@ -166,19 +198,9 @@ h1 {
   @include responsive-big-text(7vw, 50px, 90px, 60px)
 }
 
-#about {
-  background-color: $mediumblue;
-  color: $white;
-  padding-top: 150px;
-}
-
-#portfolio {
-  background-color: $white;
-  color: $darkblue;
-  min-height: 100vh;
-  height: auto;
-  padding-top: 150px;
-}
+/*******************
+  404 PAGE
+********************/
 
 #section-404 {
   background-color: $red;
@@ -193,6 +215,10 @@ h1 {
   width: auto!important;
 }
 
+/*******************
+  PROGRESS BARS
+********************/
+
 .lang-progress {
   margin: 0px 10px;
 }
@@ -204,19 +230,7 @@ h1 {
   width: 25vw;
 }
 
-.progress-bar1 {
-  background-color: $red;
-}
-
-.progress-bar2 {
-  background-color: $red;
-}
-
-.progress-bar3 {
-  background-color: $red;
-}
-
-.progress-bar4 {
+.progress-bar {
   background-color: $red;
 }
 
@@ -228,6 +242,10 @@ h1 {
   width: 80px;
 }
 
+/*******************
+  GALLERY
+********************/
+
 .gallery-flex-container {
   display: flex;
   flex-direction: row;
@@ -237,8 +255,8 @@ h1 {
 }
 
 .gallery-item {
-  height: 250px;
-  width: 250px;
+  height: $gallery-square-height;
+  width: $gallery-square-width;
   background-color: $lightblue;
   color: $darkblue;
   border-radius: 5px;
@@ -247,7 +265,7 @@ h1 {
 
 .gallery-item .overlay {
   border-radius: 5px 5px 0px 0px;
-  height: 200px;
+  height: $gallery-square-height - $gallery-caption-height;
   margin: 5px;
 }
 
@@ -257,12 +275,22 @@ h1 {
 
 .gallery-image {
   border-radius: 5px 5px 0px 0px;
-  background-size: 150%; 
+  background-size: 100%; 
   background-position: top center;
-  height: 80%;
+  height: ($gallery-square-height - $gallery-caption-height) / $gallery-square-height * 100%;
   width: 100%;
 }
 
 .gallery-text {
   padding: 10px;
+}
+
+@media (max-width: 450px) {
+  $gallery-square-width: 300px;
+  .gallery-item {
+    width: $gallery-square-width;
+  }
+  .gallery-image {
+    background-size: 130%!important;
+  }
 }
